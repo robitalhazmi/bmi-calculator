@@ -16,8 +16,8 @@ def calculate_bmi(weight, height):
         return 'Obesity (Class 3)'
 
 if __name__ == "__main__":
-    height = float(input("Enter your height in cm: "))
-    weight = float(input("Enter your weight in kg: "))
+    height = float(170)
+    weight = float(70)
     bmi = calculate_bmi(weight, height)
     bmi_df = pd.DataFrame(data={'weight': [weight], 'height': [height], 'bmi': [bmi]})
     print(bmi_df)
