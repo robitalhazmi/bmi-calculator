@@ -6,6 +6,9 @@ FROM python:3.11
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY . /app/src
+# Copy local code to the container image.
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . .
 
 CMD ["python", "./main.py"]
