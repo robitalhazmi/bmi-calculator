@@ -11,4 +11,5 @@ ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY . .
 
-CMD ["python", "./main.py"]
+EXPOSE 8080
+CMD ["python", "main.py", "8080"]
